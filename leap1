@@ -1,0 +1,48 @@
+echo "# leap" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/Alantk12/leap.git
+git push -u origin master
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int year=scan.nextInt();
+        boolean leapyr;
+        
+        if(year>=1900 && year<100000)
+        {
+            if (year%4==0 )
+            {
+                leapyr=true;
+            }
+            else if(year%100==0)
+            {
+                leapyr=false;
+            }
+            else if(year%400==0)
+            {
+                leapyr=true;
+            }
+            else
+            {
+                leapyr=false;
+            }
+            if (leapyr)
+            {
+                System.out.println("True");
+                
+            }
+         else {
+             System.out.println("False");
+         }
+        }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+}
+                
